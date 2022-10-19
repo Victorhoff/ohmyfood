@@ -1,0 +1,246 @@
+/* LOADER */
+@keyframes load {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: roboto;
+  max-width: 2560px;
+}
+
+/* LOADER */
+.loader {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  animation: load 2.5s forwards;
+  -webkit-animation: load 2.5s forwards;
+  -o-animation: load 2.5s forwards;
+}
+.loader__spinner {
+  margin: auto;
+  height: 100px;
+  width: 100px;
+  border-top: 10px solid #9356DC;
+  border-left: 10px solid #9356DC;
+  border-bottom: 10px solid #FF79DA;
+  border-right: 10px solid #FF79DA;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  animation: spin 2.5s linear forwards;
+  -webkit-animation: spin 2.5s linear forwards;
+  -o-animation: spin 2.5s linear forwards;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+}
+.header__location {
+  width: 100%;
+  background: #dcdde1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  box-shadow: inset 1px 3px 7px -6px;
+  font-weight: bold;
+  color: #485460;
+}
+.header__location .fa-solid {
+  padding: 0px 15px 5px 0px;
+}
+.header img {
+  max-width: 170px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f6fa;
+  flex-direction: column;
+  padding: 30px;
+  text-align: center;
+}
+.search p {
+  padding-top: 20px;
+}
+.search__btn {
+  color: #fff;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 30px;
+  height: 50px;
+  width: 220px;
+  font-size: 15px;
+  border: none;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.search__btn__container {
+  padding-top: 20px;
+}
+
+/* MAIN */
+.main h2 {
+  padding: 30px;
+  padding-bottom: 15px;
+}
+.main__button {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main__btn {
+  width: 90%;
+  height: 70px;
+  background: #f5f6fa;
+  border-radius: 15px;
+  border: none;
+  margin: auto;
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-family: "roboto", sans-serif;
+  font-size: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main__btn .fa-solid {
+  color: #485460;
+  position: absolute;
+  left: 12%;
+}
+.main__btn__number {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #9356DC;
+  text-align: center;
+  padding: 4px 4px;
+  position: absolute;
+  top: 22px;
+  left: -12.5px;
+}
+.main__btn:hover {
+  background-color: #f5edff;
+}
+.main__btn:hover .fa-solid {
+  color: #9356DC;
+}
+
+/* RESTAURANTS */
+.restaurants {
+  background-color: #f2f2f2;
+  padding-bottom: 50px;
+}
+.restaurants h2 {
+  padding: 30px 0% 15px 5%;
+  padding-bottom: 15px;
+}
+.restaurants__liste {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.restaurants__carte {
+  width: 100%;
+  max-width: 380px;
+  min-width: 280px;
+  height: 235px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.restaurants__carte img {
+  width: 100%;
+  object-fit: cover;
+  height: 170px;
+  border-radius: 20px 20px 0px 0px;
+}
+.restaurants__carte h3 {
+  padding: 10px 0% 0% 3%;
+}
+.restaurants__carte p {
+  padding: 5px 0% 10% 3%;
+}
+
+.new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 30px;
+  background-color: #99E2D0;
+  position: absolute;
+  left: 70%;
+  bottom: 83%;
+  border-radius: 2px;
+  font-weight: bold;
+  color: #027428;
+  z-index: 2;
+}
+
+.footer {
+  background: #353535;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+.footer__logo {
+  font-family: shrikhand;
+  font-weight: normal;
+  padding: 20px 0px 15px 5%;
+}
+.footer li {
+  text-decoration: none;
+  color: #fff;
+  list-style-type: none;
+  padding: 10px 0px 0px 5%;
+}
+
+/*# sourceMappingURL=style.css.map */
