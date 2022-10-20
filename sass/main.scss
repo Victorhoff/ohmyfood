@@ -1,4 +1,7 @@
+/* ./dart-sass/sass sass/main.scss style.css --watch */
+
 @import "animations.scss";
+@import "restaurants.scss";
 
 $primary: #9356DC;
 $secondary: #FF79DA;
@@ -39,9 +42,9 @@ $dark-grey: #485460;
         height: 100px;
         width: 100px;
         border-top: 10px solid $primary;
-        border-left: 10px solid $primary;
+        border-left: 10px #fff solid;
         border-bottom: 10px solid $secondary;
-        border-right: 10px solid $secondary;
+        border-right: 10px #fff solid;
         border-radius: 50%;
         position: absolute;
         left: 0; right: 0; top: 0; bottom: 0;
@@ -55,7 +58,6 @@ $dark-grey: #485460;
 /* HEADER */
 
 .header {
-    @include center;
     flex-direction: column;
 
     &__logo {
@@ -65,9 +67,10 @@ $dark-grey: #485460;
     }
 
     &__location {
+        @include center;
         width: 100%;
         background: $light-grey;
-        @include center;
+  
         height: 50px;
         box-shadow: inset 1px 3px 7px -6px;
         font-weight: bold;
@@ -103,9 +106,16 @@ $dark-grey: #485460;
         font-size: 15px;
         border: none;
         box-shadow: 4px 4px 10px rgb(0 0 0 / 30%);
+        cursor: pointer;
 
         &__container {
             padding-top: 20px;
+            @include center;
+        }
+
+        &:hover {
+            opacity: 0.8;
+            transition: 0.4s;
         }
     }
 
@@ -116,8 +126,7 @@ $dark-grey: #485460;
 .main {
 
     & h2 {
-        padding: 30px;
-        padding-bottom: 15px;
+        padding: 30px 0px 15px 5%;
     }
 
     &__button {
@@ -141,6 +150,7 @@ $dark-grey: #485460;
             display: flex;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
 
             .fa-solid {
                 color: $dark-grey;
@@ -166,6 +176,7 @@ $dark-grey: #485460;
 
             &:hover {
                 background-color: #f5edff;
+                transition: 0.4s;
 
                 .fa-solid {
                     color: $primary;
@@ -210,15 +221,53 @@ $dark-grey: #485460;
                 border-radius: 20px 20px 0px 0px;
             }
 
-            & h3 {
-                padding: 10px 0% 0% 3%;
+            & p {
+                padding: 5px 0% 10% 0%;
             }
 
-            & p {
-                padding: 5px 0% 10% 3%;
+            & .fa-solid::before {
+                background: -moz-linear-gradient($secondary, $primary);
+                background: -webkit-linear-gradient($secondary, $primary);
+                background: linear-gradient($secondary, $primary);
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
+        
+
     }
 
+}
+
+.restaurants__infos {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.heart__full {
+    position: absolute;
+    bottom: 20px;
+    opacity: 0;
+    transition: all 0.4s;
+    cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+            transform: scale(1.13);
+        }
+}
+
+.heart__empty {
+    position: relative;
+    opacity: 1;
+    cursor: pointer;
+
+        &:hover {
+            opacity: 0;
+        }
 }
 
 .new {
@@ -251,11 +300,26 @@ $dark-grey: #485460;
     }
 
     & li {
-        text-decoration: none;
         color: #fff;
         list-style-type: none;
         padding: 10px 0px 0px 5%;
 
+    }
+
+    & a {
+        text-decoration: none;
+    }
+
+    & .fa-solid::before {
+        color: #fff;
+    }
+
+    & .fa-utensils::before {
+        padding-right:11px;
+    }
+
+    & .fa-handshake-angle::before {
+        padding-right: 5px;
     }
 }
 
