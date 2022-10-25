@@ -73,7 +73,7 @@ body {
         }
 
         & h3 {
-            width: 90%;
+            width: 92.5%;
             margin: auto;
             margin-top: 25px;
             margin-bottom: 15px;
@@ -93,8 +93,6 @@ body {
         }
 
         &__starters, &__dishes, &__desserts {
-            width: 90%;
-            margin: auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -104,12 +102,13 @@ body {
             background-color: #f7f9fd;
             border-radius: 10px;
             box-shadow: 4px 4px 10px rgb(0 0 0 / 30%);
+            margin: auto;
             margin-top: 15px;
             padding: 15px;
             animation: slider-down 1s;
             display: flex;
             justify-content: space-between;
-            width: 100%;
+            width: 90%;
             overflow: hidden;
             cursor: pointer;
 

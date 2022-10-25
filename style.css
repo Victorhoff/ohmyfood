@@ -458,7 +458,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .menu h3 {
-  width: 90%;
+  width: 92.5%;
   margin: auto;
   margin-top: 25px;
   margin-bottom: 15px;
@@ -476,8 +476,6 @@ body {
   bottom: -10px;
 }
 .menu__starters, .menu__dishes, .menu__desserts {
-  width: 90%;
-  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -486,12 +484,13 @@ body {
   background-color: #f7f9fd;
   border-radius: 10px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  margin: auto;
   margin-top: 15px;
   padding: 15px;
   animation: slider-down 1s;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 90%;
   overflow: hidden;
   cursor: pointer;
 }
