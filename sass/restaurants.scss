@@ -1,8 +1,7 @@
-@mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
+
+@import "animations.scss";
+@import "variables&mixins.scss";
 
 body {
     font-family: roboto;
@@ -15,7 +14,7 @@ body {
     margin: auto;
 
     &__logo {
-        width: 86%;
+        width: 84%;
         @include center;
     }
 
@@ -42,15 +41,15 @@ body {
 }
 
 .menu {
-    background: #ebedf1;
+    background: #f2f2f2;
     border-radius: 40px 40px 0px 0px;
     width: 100%;
     padding-bottom: 60px;
     margin-top: -50px;
-    z-index: 1;
+    z-index: 10;
 
         &__title {
-            height: 50px;
+            height: 70px;
             display: flex;
             width: 90%;
             margin: auto;
@@ -59,16 +58,38 @@ body {
             justify-content: space-between;
             font-family: shrikhand;
 
+                & .fa-solid::before {
+                    @include heart-color;
+                }
+
                 & h2 {
-                font-weight: normal; 
-                }     
+                font-weight: normal;
+                }
+
+                & .fa-solid::before {
+                    @include heart-color;
+                }
+
         }
 
         & h3 {
             width: 90%;
             margin: auto;
-            margin-top: 20px;
+            margin-top: 25px;
+            margin-bottom: 15px;
             font-weight: normal;
+            position: relative;
+            text-transform: uppercase;
+
+            &::after {
+                content: "";
+                width: 40px;
+                height: 4px;
+                background-color: $tertiary;
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+            }
         }
 
         &__starters, &__dishes, &__desserts {
@@ -83,37 +104,92 @@ body {
             background-color: #f7f9fd;
             border-radius: 10px;
             box-shadow: 4px 4px 10px rgb(0 0 0 / 30%);
-            height: 70px;
             margin-top: 15px;
+            padding: 15px;
+            animation: slider-down 1s;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            overflow: hidden;
+            cursor: pointer;
 
                 & h4 {
-                    margin-top: 14px;
-                    margin-left: 10px;
                     text-overflow: ellipsis;
                     overflow: hidden;
                     white-space: nowrap;
                 }
 
                 & p {
-                    margin-left: 10px;
-                    margin-top: 7px;
-                    text-overflow: ellipsis;
+                    margin-top: 5px;
                     text-overflow: ellipsis;
                     overflow: hidden;
                     white-space: nowrap;
-                    width: 85%;
                 }
+
+                
+                &__content {
+                    flex: 1;
+                }
+
+                &__price {
+                    font-weight: bold;
+                    @include center;
+                    margin-top: 10px;
+                }
+
+                &__icon {
+                    @include center;
+                    background: $tertiary;
+                    border-radius: 0px 10px 10px 0px;
+                    overflow: hidden;
+                    margin: -16px -80px -16px 16px;
+                    width: 64px;
+                    transition-duration: 0.5s;
+
+                        .fa-regular::before {
+                            color: $tertiary;
+                            background: white;
+                            border-radius: 50%;
+                        }
+                }
+
+                &:hover &__icon {
+                    margin-right: -16px;
+                }
+
+                &__rotate {
+                    transform: rotate(-360deg);
+                    transition-duration: 0.5s;
+                }
+
+                &:hover &__rotate {
+                    transform: rotate(0deg);
+                    transition-duration: 0.5s;
+                }
+ 
         }
+        
 }
 
-.subtitle {
-    display: flex;
-    width: 100%;
+.heart__full {
+    @include heart-full;
+}
 
-    &__price {
-        font-weight: bold;
+.heart__empty {
+    margin-top: 19px;
+    @include heart-empty;
+}
+
+.menu__heart {
+    height: 70px;
+}
+
+@for $i from 0 to 10 {
+    .delay-#{$i} {
+      animation-delay:  #{$i / 8}s;
     }
-}
+  }
+
 
 .btn {
     margin-top: 20px;
