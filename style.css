@@ -291,11 +291,11 @@
 
 .footer {
   background: #353535;
-  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 30px;
+  color: #fff;
 }
 .footer__logo {
   font-family: shrikhand;
@@ -303,12 +303,12 @@
   padding: 20px 0px 15px 5%;
 }
 .footer li {
-  color: #fff;
   list-style-type: none;
   padding: 10px 0px 0px 5%;
 }
 .footer a {
   text-decoration: none;
+  color: #fff;
 }
 .footer .fa-solid::before {
   color: #fff;

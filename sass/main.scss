@@ -251,11 +251,11 @@
 
 .footer {
     background: #353535;
-    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 30px;
+    color: #fff;
 
     &__logo {
         font-family: shrikhand;
@@ -264,7 +264,6 @@
     }
 
     & li {
-        color: #fff;
         list-style-type: none;
         padding: 10px 0px 0px 5%;
 
@@ -272,6 +271,7 @@
 
     & a {
         text-decoration: none;
+        color: #fff;
     }
 
     & .fa-solid::before {
