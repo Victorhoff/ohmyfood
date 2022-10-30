@@ -504,6 +504,7 @@ body {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  width: 60%;
 }
 .menu__card__content {
   flex: 1;
