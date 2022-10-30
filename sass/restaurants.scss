@@ -116,7 +116,7 @@ body {
                     text-overflow: ellipsis;
                     overflow: hidden;
                     white-space: nowrap;
-                    max-width: 70%;
+                    width: 90%;
                 }
 
                 & p {
@@ -124,12 +124,16 @@ body {
                     text-overflow: ellipsis;
                     overflow: hidden;
                     white-space: nowrap;
-                    max-width: 70%;
+                    width: 90%;
                 }
 
                 
                 &__content {
                     flex: 1;
+                    max-width: 90%;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
                 }
 
                 &__price {

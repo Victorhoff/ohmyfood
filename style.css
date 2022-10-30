@@ -498,17 +498,21 @@ body {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  max-width: 70%;
+  width: 90%;
 }
 .menu__card p {
   margin-top: 5px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  max-width: 70%;
+  width: 90%;
 }
 .menu__card__content {
   flex: 1;
+  max-width: 90%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu__card__price {
   font-weight: bold;
