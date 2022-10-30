@@ -498,13 +498,14 @@ body {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  max-width: 70%;
 }
 .menu__card p {
   margin-top: 5px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  width: 60%;
+  max-width: 70%;
 }
 .menu__card__content {
   flex: 1;
