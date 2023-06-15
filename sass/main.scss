@@ -115,21 +115,18 @@
     }
 
     &__btn {
+        @include center;
         width: 90%;
         height: 70px;
         background: #f5f6fa;
         border-radius: 15px;
         border: none;
-        margin: auto;
         margin-bottom: 20px;
         box-shadow: 4px 4px 10px rgb(0 0 0 / 10%);
         font-weight: bold; 
         font-family: 'roboto', sans-serif;
         font-size: 15px;
         position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         cursor: pointer;
 
         .fa-solid {
@@ -191,8 +188,8 @@
         background-color: #fff;
         border-radius: 20px;
         margin-bottom: 20px;
-        box-shadow: 4px 4px 10px rgb(0 0 0 / 10%);
         position: relative;
+        box-shadow: 4px 4px 10px rgb(0 0 0 / 10%);
 
             & img {
                 width: 100%;
@@ -235,16 +232,16 @@
 }
 
 .new {
+    color: #1b6150;
     @include center;
     width: 80px;
     height: 30px;
     background-color: $tertiary;
     position: absolute;
-    left: 70%;
-    bottom: 83%;
+    right: 5%;
+    top: 5%;
     border-radius: 2px;
     font-weight: bold;
-    color: #027428;
     z-index: 2;
 
 }
